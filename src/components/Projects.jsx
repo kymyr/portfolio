@@ -11,26 +11,38 @@ const Projects = () => {
     {
       id: 1,
       src: todo,
+      name: "Firebase To-Do List",
+      href: "https://github.com/kymyr/firebase-todo-list",
     },
     {
       id: 2,
       src: weather,
+      name: "Responsive Weather App",
+      href: "https://github.com/kymyr/weather-app-js"
     },
     {
       id: 3,
       src: navpu,
+      name: "NAVPU Predictive Model",
+      href: "https://github.com/kymyr/NAVPU-Predictive-Model",
     },
     {
       id: 4,
       src: detection,
+      name: "Motion & Object Detection",
+      href: "https://github.com/kymyr/motion-object-detection",
     },
     {
       id: 5,
       src: portfolio,
+      name: "Professional Portfolio",
+      href: "https://github.com/kymyr/portfolio",
     },
     {
       id: 6,
       src: more,
+      name: "Check out my Github",
+      href: "https://github.com/kymyr",
     },
   ];
 
@@ -48,7 +60,7 @@ const Projects = () => {
             </div>
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-                {projects.map(({ id, src }) => (
+                {projects.map(({ id, src, href, name }) => (
                     <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
                     <img
                         src={src}
@@ -56,11 +68,15 @@ const Projects = () => {
                         className="rounded-md duration-200 hover:scale-105"
                     />
                     <div className="flex items-center justify-center">
-                        <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                            Demo
-                        </button>
-                        <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                            Github
+                        <button className="w-100 px-6 py-3 m-4 duration-200 hover:scale-105">
+                            <a
+                                href={href}
+                                className="flex justify-between items-center w-full text-white"
+                                target="_blank"
+                                rel="noreferrer"
+                                >
+                                {name}
+                            </a>
                         </button>
                     </div>
                     </div>
