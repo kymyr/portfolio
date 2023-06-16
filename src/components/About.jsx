@@ -112,9 +112,9 @@ const About = () => {
       return (
         <div
           name="about"
-          className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
+          className="w-full h-auto bg-gradient-to-b from-gray-800 to-black"
         >
-          <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
+          <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full md:h-auto text-white">
             <div>
               <p className="text-4xl font-bold underline decoration-gray-600 py-6 hover:decoration-white">
                 About Me
@@ -127,7 +127,7 @@ const About = () => {
               </div>
             </div>
     
-            <div className="w-full grid grid-cols-3 sm:grid-cols-3 gap-7 text-center py-8 px-12 sm:px-0 text-white">
+            <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-7 text-center py-8 px-12 sm:px-0 text-white">
               {techs.map(({ id, src, title, style }) => (
                 <div
                   key={id}

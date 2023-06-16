@@ -1,5 +1,4 @@
 import React from 'react';
-import profile from "../assets/profile.jpg";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 
@@ -15,18 +14,17 @@ const Home = () => {
             <div className="hover:animate-wave inline-block">👋Hi,</div> 
             <div className="inline">I'm Kyl Myrrh</div>
           </h2>
-          <p className="intro-text text-gray-400 py-4 max-w-lg hover:text-white">
+          <p className="text-gray-400 py-4 max-w-3xl hover:text-white">
             💻 Welcome to the digital sandbox that I've crafted where imagination and logic intertwine to bring visions to life. 
           </p>
 
-          <p className="intro-text text-gray-400 py-4 max-w-md hover:text-white">
+          <p className="text-gray-400 py-4 max-w-3xl hover:text-white">
             🔥 I am a passionate aspiring software engineer with an insatiable curiosity and a relentless pursuit of self-improvement.
           </p>
 
-          <p className="intro-text text-gray-400 py-4 max-w-md hover:text-white">
+          <p className="text-gray-400 py-4 max-w-3xl hover:text-white">
           🚀 So step into my digital realm, where creativity meets functionality and let's embark on a journey through my portfolio.
           </p>
-          
 
           <div>
             <Link
@@ -41,14 +39,6 @@ const Home = () => {
               </span>
             </Link>
           </div>
-        </div>
-
-        <div>
-          <img
-            src={profile}
-            alt="my profile"
-            className="rounded-2xl mx-auto w-2/3 md:w-full"
-          />
         </div>
       </div>
     </div>
