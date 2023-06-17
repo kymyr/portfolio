@@ -45,16 +45,18 @@ const Contact = () => {
         </div>
 
         <div className=" flex justify-center items-center">
-            <form
-                // action="https://getform.io/f/15cf0e9d-b48c-4632-9085-a46a2a0da378"
-                // type="hidden" name="_gotcha" style="display:none !important"
-                // action = "/contact"
-                data-netlify="true" netlify-honeypot="bot-field" 
-                name="contact"
-                onSubmit={handleSubmit}
-                method="POST"
-                className="flex flex-col w-full md:w-1/2"
-            >
+          <form
+              // action="https://getform.io/f/15cf0e9d-b48c-4632-9085-a46a2a0da378"
+              // type="hidden" name="_gotcha" style="display:none !important"
+              // action = "/contact"
+              data-netlify="true" 
+              netlify-honeypot="bot-field" 
+              netlify
+              name="contact"
+              onSubmit={handleSubmit}
+              method="POST"
+              className="flex flex-col w-full md:w-1/2"
+          >
             <input type="hidden" name="form-name" value="contact" />
             
             <label htmlFor="name" className=" p-1 text-xl">
@@ -104,7 +106,7 @@ const Contact = () => {
             ></textarea>
             {errors.message && touched.message && <p className="error text-red-500">{errors.message}</p>}
 
-            <button type="submit" disabled={isSubmitting} className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
+            <button disabled={isSubmitting} className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
               Let's talk
             </button>
           </form>
