@@ -17,7 +17,7 @@ const Contact = () => {
         <div className=" flex justify-center items-center">
             <form
                 // action="https://getform.io/f/15cf0e9d-b48c-4632-9085-a46a2a0da378"
-                netlify netlify-honeypot="bot-field" hidde
+                data-netlify="true" netlify-honeypot="bot-field" hidden onSubmit="submit"
                 method="POST"
                 className="flex flex-col w-full md:w-1/2"
             >
@@ -40,7 +40,7 @@ const Contact = () => {
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             ></textarea>
 
-            <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
+            <button type="submit" className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
               Let's talk
             </button>
           </form>
