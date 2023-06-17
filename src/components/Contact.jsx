@@ -16,23 +16,28 @@ const Contact = () => {
 
         <div className=" flex justify-center items-center">
             <form
-                // action="https://getform.io/f/15cf0e9d-b48c-4632-9085-a46a2a0da378"
-                data-netlify="true" netlify-honeypot="bot-field" hidden onSubmit="submit"
+                action="https://getform.io/f/15cf0e9d-b48c-4632-9085-a46a2a0da378"
+                // action = "/contact"
+                // data-netlify="true" netlify-honeypot="bot-field" hidden 
+                onSubmit="submit"
                 method="POST"
                 className="flex flex-col w-full md:w-1/2"
             >
+
             <input
               type="text"
               name="name"
               placeholder="Enter your name"
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             />
+
             <input
               type="text"
               name="email"
               placeholder="Enter your email"
               className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             />
+
             <textarea
               name="message"
               placeholder="Enter your message"
