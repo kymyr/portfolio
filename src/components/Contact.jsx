@@ -16,9 +16,10 @@ const Contact = () => {
 
         <div className=" flex justify-center items-center">
             <form
-                action="https://getform.io/f/15cf0e9d-b48c-4632-9085-a46a2a0da378"
+                // action="https://getform.io/f/15cf0e9d-b48c-4632-9085-a46a2a0da378"
+                netlify netlify-honeypot="bot-field" hidde
                 method="POST"
-                className=" flex flex-col w-full md:w-1/2"
+                className="flex flex-col w-full md:w-1/2"
             >
             <input
               type="text"
