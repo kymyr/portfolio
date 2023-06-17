@@ -17,7 +17,6 @@ const Contact = () => {
     isSubmitting,
     handleBlur,
     handleChange,
-    handleSubmit,
   } = useFormik({
     initialValues: {
       email: "",
@@ -53,7 +52,7 @@ const Contact = () => {
               netlify-honeypot="bot-field" 
               netlify
               name="contact"
-              onSubmit={handleSubmit}
+              onSubmit="submit"
               method="POST"
               className="flex flex-col w-full md:w-1/2"
           >
