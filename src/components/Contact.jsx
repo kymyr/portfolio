@@ -67,7 +67,7 @@ const Contact = () => {
               className={`"my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none
               ${errors.name && touched.name ? "input-error" : ""}`}
               type="text"
-              id="name"
+              name="name"
               placeholder="Enter your name"
               value={values.name}
               onChange={handleChange}
@@ -84,7 +84,7 @@ const Contact = () => {
               className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none
               ${errors.email && touched.email ? "input-error" : ""}`}
               type="email"
-              id="email"
+              name="email"
               placeholder="Enter your email"
               onChange={handleChange}
               onBlur={handleBlur}
@@ -96,7 +96,7 @@ const Contact = () => {
             </label>
 
             <textarea
-              id="message"
+              name="message"
               placeholder="Enter your message"
               rows="10"
               className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none
@@ -106,7 +106,7 @@ const Contact = () => {
             ></textarea>
             {errors.message && touched.message && <p className="error text-red-500">{errors.message}</p>}
 
-            <button disabled={isSubmitting} className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
+            <button type="submit" disabled={isSubmitting} className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
               Let's talk
             </button>
           </form>
