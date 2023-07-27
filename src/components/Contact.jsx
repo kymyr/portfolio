@@ -2,13 +2,6 @@ import React from "react";
 import { useFormik } from "formik";
 import { validation } from "../schema";
 
-const onSubmit = async (values, actions) => {
-  console.log(values);
-  console.log(actions);
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  actions.resetForm();
-};
-
 const Contact = () => {
   const {
     values,
@@ -24,11 +17,9 @@ const Contact = () => {
       message: "",
     },
     validationSchema: validation,
-    onSubmit,
   });
 
   console.log(errors);
-
 
   return (
     <div
@@ -45,18 +36,14 @@ const Contact = () => {
 
         <div className=" flex justify-center items-center">
           <form
-              // action="https://getform.io/f/15cf0e9d-b48c-4632-9085-a46a2a0da378"
-              // type="hidden" name="_gotcha" style="display:none !important"
-              // action = "/contact"
+              action="https://getform.io/f/15cf0e9d-b48c-4632-9085-a46a2a0da378"
               data-netlify="true" 
               netlify-honeypot="bot-field" 
-              netlify
               name="contact"
-              onSubmit="submit"
               method="POST"
               className="flex flex-col w-full md:w-1/2"
           >
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="_gotcha" />
             
             <label htmlFor="name" className=" p-1 text-xl">
               Name
@@ -71,7 +58,6 @@ const Contact = () => {
               value={values.name}
               onChange={handleChange}
               onBlur={handleBlur}
-              // className={errors.age && touched.age ? "input-error" : ""}
             />
             {errors.name && touched.name && <p className="error text-red-500">{errors.name}</p>}
 
